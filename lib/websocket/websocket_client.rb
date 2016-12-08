@@ -12,7 +12,7 @@ module WatsonTtsAsrClient
         voice:             'en-US_AllisonVoice',
         customization_id:  '',
         learning_opt_out:  'true',
-        credentials:       { tts_url: { username: '4f49f8f0-58e0-4d83-b9e7-2651c28624e2', password: 'mZWMfhY7LRqL' }, asr_url: { username: '8f2f976a-b645-445e-9da6-ffe7393cca91', password: 'd7oGMpgfSDqh' }}
+        credentials:       { tts_url: { username: '', password: '' }, asr_url: { username: '', password: '' }}
       }
     end
     #max size allowed by ibm is 4 million bytes
