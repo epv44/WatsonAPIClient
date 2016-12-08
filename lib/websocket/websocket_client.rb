@@ -83,6 +83,7 @@ module WatsonTtsAsrClient
         ws.onclose do |code, reason|
           STDERR.puts "Disconnected with status code: #{code}"
           yield response
+          stop
         end
 
         ws.onping do |msg|
@@ -95,7 +96,9 @@ module WatsonTtsAsrClient
 
         ws.onerror do |e|
           STDERR.puts "Error in websocket connection to IBM: #{e}"
+          STDERR.puts "For url: #{connection_url}"
           yield e
+          stop
         end
 
         def stop
